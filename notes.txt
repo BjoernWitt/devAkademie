@@ -1,1 +1,4 @@
-bli bla blupp
+git init // for initialization of the repository
+git add <file>
+git commit -m "message"
+
