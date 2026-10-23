@@ -1,0 +1,31 @@
+.slider_b {
+    height: 300px;
+
+    display: flex;
+    gap: 15px;
+}
+
+.slider_b_element {
+    width: 100px;
+    height: 80%;
+    z-index: 1;
+    background-color: blueviolet;
+
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+
+    transform: perspective(250px) rotateY(20deg) translateX(-20px);
+    transform-origin: 50% 50%;
+
+    transition: all 250ms ease-in-out;
+}
+
+.slider_b_element:hover {
+    z-index: 2;
+    transform: perspective(250px) rotateY(0deg) translateX(-20px) scaleX(1.5) scaleY(1.2);
+}
+
+.slider_b_element:hover~.slider_b_element {
+    background-color: brown;
+    transform: perspective(250px) rotateY(-20deg) translateX(20px);
+}
